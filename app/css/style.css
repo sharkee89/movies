@@ -1,0 +1,47 @@
+/* General settings */
+img {
+	max-width: 100%;
+}
+
+
+/***************************************
+*********** Movies list page ***********
+***************************************/
+
+/* Genres list */
+.bold-text {
+	color: #78cc78 !important;
+}
+
+.genres {
+	margin-top: 20px;
+}
+
+/* Movie list */
+.btn-movie {
+	width: 100%;
+}
+
+/***************************************
+********** Movie detail page ***********
+***************************************/
+
+.movie-description {
+	margin-top: 20px;
+}
+
+.movie-actors {
+	margin-top: 20px;
+}
+
+.movie-trailer iframe {
+	width: 100%;
+}
+
+.movie-actor-name {
+	width: 100%;
+}
+
+.carousel-indicators {
+	display: none;
+}

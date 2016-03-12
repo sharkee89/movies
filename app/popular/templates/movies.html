@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row row-offcanvas row-offcanvas-right">
+    <div class="col-xs-12 col-sm-9">
+      <p class="pull-right visible-xs">
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+      </p>
+
+      <div class="orders">
+          <div class="row">
+             <div class="col-md-8">
+                 <ul class="pagination">
+                   <li><a ng-click="$root.orderByPhrase = 'title'" href="">A-Z</a></li>
+                   <li><a ng-click="$root.orderByPhrase = '-title'" href="">Z-A</a></li>
+                   <li><a ng-click="$root.orderByPhrase = '-release_date'" href="">Newest to oldest</a></li>
+                   <li><a ng-click="$root.orderByPhrase = 'release_date'" href="">Oldest to newest</a></li>
+                   <li><a ng-click="$root.orderByPhrase = ''" href="">Clear</a></li>
+                 </ul>
+             </div>
+             <div class="col-md-4">
+                 <input style="margin: 20px 0;" type="input" class="movie-search list-group-item active" ng-model="$root.searchPhrase" placeholder="Search">
+             </div>
+          </div>
+      </div>
+
+      <div class="row movie-list">
+        <div ng-if="popularMovie.poster_path" ng-repeat="popularMovie in popularMovies | filter:$root.searchPhrase | orderBy:$root.orderByPhrase">
+          <div class="col-xs-6 col-lg-4">
+            <h6>{{popularMovie.title}}</h6>
+            <img class="img-full img-responsive" ng-src="http://image.tmdb.org/t/p/w500{{popularMovie.poster_path}}">
+            <p>{{popularMovie.release_date | date : 'dd MMMM yyyy'}}</p>
+            <p><a class="btn btn-info btn-movie" ng-href="#/movie/{{popularMovie.id}}" role="button">{{popularMovie.title}}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!--/row-->
+
+</div><!--/.container-->
