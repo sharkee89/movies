@@ -1,41 +1,44 @@
 <div class="genres-container" id="sidebar" ng-controller="GenresCtrl">
-  <div class="genres">
-    <table class="table">
-      <tr><td><a href="#/" class="something" ng-class="{'bold-text': $root.selectedId == 'Popular'}">Popular</a></td></tr>
-      <tr><td><a href="#/upcoming" ng-class="{'bold-text': $root.selectedId == 'Upcoming'}">Upcoming</a></td></tr>
-      <tr><td><a href="#/toprated" ng-class="{'bold-text': $root.selectedId == 'Top rated'}">Top rated</a></td></tr>
-      <tr><td><a href="#/nowplaying" ng-class="{'bold-text': $root.selectedId == 'Now Playing'}">Now Playing</a></td></tr>
-      <tr ng-repeat="genre in genres"><td><a ng-class="{'bold-text': $root.selectedId == genre.id}" href="#/genre/{{genre.id}}">{{genre.name}}</a></td></tr>
-  </table>
-  </div>
+    <div class="hamburger">
+        <p class="text-right"><a ng-click="openHamMenu()"><img src="http://www.jgcreative.tv/assets/images/Hamburger.png" alt="" /></a></p>
+    </div>
+    <div class="genres" ng-class="{displayNone: !hamMenuOpened}">
+        <table class="table">
+            <tr><td><a href="#/" class="something" ng-class="{'bold-text': $root.selectedId == 'Popular'}">Popular</a></td></tr>
+            <tr><td><a href="#/upcoming" ng-class="{'bold-text': $root.selectedId == 'Upcoming'}">Upcoming</a></td></tr>
+            <tr><td><a href="#/toprated" ng-class="{'bold-text': $root.selectedId == 'Top rated'}">Top rated</a></td></tr>
+            <tr><td><a href="#/nowplaying" ng-class="{'bold-text': $root.selectedId == 'Now Playing'}">Now Playing</a></td></tr>
+            <tr ng-repeat="genre in genres"><td><a ng-class="{'bold-text': $root.selectedId == genre.id}" href="#/genre/{{genre.id}}">{{genre.name}}</a></td></tr>
+        </table>
+    </div>
 
-  <!-- Comments -->
-  <div class="comments">
-    <div>
-      <button ng-click="toggleCommentsForm()" class="btn btn-success">Write a comment</button>
-      <form ng-cloak ng-show="showCommentForm">
-      <div class="form-group">
-        <div>
-          <input class="img-full" type="text" placeholder="Nickname" ng-model="commentNick">
-        </div>
-        <div>
-          <textarea class="img-full" type="textarea" placeholder="Text" rows="14" ng-model="commentText"></textarea>
-        </div>
-        <div>
-          <button ng-click="postComment(commentNick, commentText, movie.id)" class="btn btn-info">Post comment</button>
-        </div>
-      </div>
-    </form>
-    </div>
+    <!-- Comments -->
     <div class="comments">
-      <div class="comment" ng-repeat="comment in comments | filter: movieFBFilter">
-        <p stye="width: 100%">
-          <strong>{{comment.nick}}:</strong> {{comment.text}}
-        </p>
-        <p>
-          {{comment.timestamp | date : 'dd MMMM yyyy, H:mm:ss'}}
-        </p>
-      </div>
+        <div>
+            <button ng-click="toggleCommentsForm()" class="btn btn-success">Write a comment</button>
+            <form ng-cloak ng-show="showCommentForm">
+                <div class="form-group">
+                    <div>
+                        <input class="img-full" type="text" placeholder="Nickname" ng-model="commentNick">
+                    </div>
+                    <div>
+                        <textarea class="img-full" type="textarea" placeholder="Text" rows="14" ng-model="commentText"></textarea>
+                    </div>
+                    <div>
+                        <button ng-click="postComment(commentNick, commentText, movie.id)" class="btn btn-info">Post comment</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="comments">
+            <div class="comment" ng-repeat="comment in comments | filter: movieFBFilter">
+                <p stye="width: 100%">
+                    <strong>{{comment.nick}}:</strong> {{comment.text}}
+                </p>
+                <p>
+                    {{comment.timestamp | date : 'dd MMMM yyyy, H:mm:ss'}}
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

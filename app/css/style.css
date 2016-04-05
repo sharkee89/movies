@@ -1,33 +1,65 @@
-/* General settings */
+/***************************************
+*********** General settings ***********
+***************************************/
 img {
 	max-width: 100%;
+	max-height: 100%;
 }
 
+.displayNone {
+	display: none;
+}
+
+/***************************************
+*********** Navigation menu ************
+***************************************/
+.sidebar-genres-menu {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.hamburger {
+	height: 50px;
+	background-color: darkgray;
+}
+
+.hamburger img {
+
+}
+
+.genres {
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+}
+/***************************************
+************** Comments ****************
+***************************************/
+.comments {
+	display: none;
+}
 
 /***************************************
 *********** Movies list page ***********
 ***************************************/
-
-/* Genres list */
-.bold-text {
-	color: #78cc78 !important;
-}
-
-.genres {
-	margin-top: 20px;
-}
-
-/* Movie list */
-.btn-movie {
+/* Orders */
+.orders input {
 	width: 100%;
 }
 
-.hidden-text {
-	text-overflow: ellipsis;
-	overflow: hidden;
-	width: 160px;
-	height: 1.2em;
-	white-space: nowrap;
+/* Movie details */
+.zoom-container {
+	margin-bottom: 10px;
+}
+
+.movie-wrapper {
+	margin-bottom: 10px;
+}
+
+.movie-wrapper .text-right {
+	color: lightgray;
 }
 
 /***************************************
@@ -58,7 +90,7 @@ img {
 ********* Image zoom animation *********
 ***************************************/
 
-.image-zoom-container {
+/*.image-zoom-container {
 	list-style: none;
 	font-size: 0px;
 }
@@ -66,7 +98,6 @@ img {
 	position: relative;
 	overflow: hidden;
 	display: inline-block;
-	/*width: 33.33%;*/
 	font-size: 16px;
 	font-size: 1rem;
 	border: 1px solid #fff;
@@ -79,10 +110,10 @@ img {
 	display: block;
 	width: 100%;
 	height: auto;
-	-webkit-transition: all .5s ease; /* Safari and Chrome */
-        -moz-transition: all .5s ease; /* Firefox */
-        -ms-transition: all .5s ease; /* IE 9 */
-        -o-transition: all .5s ease; /* Opera */
+	-webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
         transition: all .5s ease;
 }
 .zoom-container .zoom-caption {
@@ -93,10 +124,10 @@ img {
 	left: 0;
 	z-index: 10;
 	background: rgba(0, 0, 0, .5);
-	-webkit-transition: all .5s ease; /* Safari and Chrome */
-        -moz-transition: all .5s ease; /* Firefox */
-        -ms-transition: all .5s ease; /* IE 9 */
-        -o-transition: all .5s ease; /* Opera */
+	-webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
         transition: all .5s ease;
 }
 .zoom-container .zoom-caption h3 {
@@ -114,24 +145,41 @@ img {
 	border-bottom: 5px solid rgba(255, 255, 255, .15);
 }
 .zoom-container:hover img {
-	-webkit-transform:scale(1.25); /* Safari and Chrome */
-        -moz-transform:scale(1.25); /* Firefox */
-        -ms-transform:scale(1.25); /* IE 9 */
-        -o-transform:scale(1.25); /* Opera */
-         transform:scale(1.25);
+	-webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
 }
 .zoom-container:hover .zoom-caption {
 	background: none;
+}*/
+
+/*.movie-plp-container {
+	position: relative;
+	width: 260px;
+	height: 390px;
 }
 
+.movie-plp-container img {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	max-width: 100%;
+	max-height: 100%;
+}*/
+
 @media (max-width: 767px) {
-	.zoom-container {
+	/*.zoom-container {
 		width: 50%;
-	}
+	}*/
 }
 
 @media (max-width: 480px) {
-	.zoom-container {
+	/*.zoom-container {
 		width: 100%;
-	}
+	}*/
 }
