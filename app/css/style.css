@@ -26,7 +26,7 @@ span {
 .hamburger {
 	padding: 0 10px;
 	height: 50px;
-	background-color: darkgray;
+	background-color: #272b30;
 	/*position:fixed;
 	top:0;
 	left: 0;
@@ -134,7 +134,7 @@ span {
 		-o-transition: all .5s ease;
 		position: absolute;
 		top: 100%;
-		background-color: darkgray;
+		background-color: #272b30;
 		color: #fff;
 		width: 100%;
 		z-index: 999;

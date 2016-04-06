@@ -23,16 +23,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="actor-info">
-                                <p>Name: <strong>{{actor.name}}</strong></p>
-                                <p>Birthday: {{actor.birthday | date : 'dd MMMM yyyy'}}</p>
-                                <p ng-if="actor.deathday">Death Day: {{actor.deathday}}</p>
-                                <p>Place of Birth: {{actor.place_of_birth}}</p>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div>
-                                <h4 class="actor-movies-title">{{actor.name}} - Movies</h4>
+                                <h4 class="actor-movies-title hidden-lg hidden-md">{{actor.name}} - Movies</h4>
                                 <flex-slider slide="s in mySlides">
                                     <li>
                                         <img ng-src="{{s}}">
@@ -40,6 +32,15 @@
                                 </flex-slider>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="actor-info">
+                                <p>Name: <strong>{{actor.name}}</strong></p>
+                                <p>Birthday: {{actor.birthday | date : 'dd MMMM yyyy'}}</p>
+                                <p ng-if="actor.deathday">Death Day: {{actor.deathday}}</p>
+                                <p>Place of Birth: {{actor.place_of_birth}}</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
