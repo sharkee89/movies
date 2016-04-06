@@ -19,13 +19,20 @@ app.controller('ActorCtrl', ['$scope', '$routeParams', 'Restangular', '$location
         query = Restangular.all(response.id).all('movie_credits');
         query.customGET("", params).then(function (response){
             $scope.movieCredits = response.cast;
+            $scope.mySlides = [];
             for (index in $scope.movieCredits) {
                 var movie = {
                     id: $scope.movieCredits[index].id,
                     image: 'http://image.tmdb.org/t/p/w500' + $scope.movieCredits[index].poster_path
                 };
-                $scope.addSlide(movie);
+                    // $scope.mySlides.push(movie.image);
             }
+            $scope.mySlides = ["http://image.tmdb.org/t/p/w500/j5dUcaMtaAa0Cx3ex8CjuJnvrPA.jpg",
+             "http://image.tmdb.org/t/p/w500/eHS8kIaxvFVBWvda0HBxmWbiyVK.jpg",
+             "http://image.tmdb.org/t/p/w500/2fZBxMPmUdvDW7XKj9yD6RBpkRF.jpg",
+             "http://image.tmdb.org/t/p/w500/nAgFSepes6L6mNYTf4P1vFJdJJn.jpg",
+             "http://image.tmdb.org/t/p/w500/lUFZr1hEgFbowMHzJhAKx08VMGA.jpg"];
+            console.log($scope.mySlides);
         });
 
     });

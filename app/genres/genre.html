@@ -1,19 +1,19 @@
 <div class="col-xs-12 col-sm-9">
-<p class="pull-right visible-xs">
-  <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-</p>
-<div class="jumbotron">
-  <h1>Movie application</h1>
-  <p>Movie application under construction.</p>
-</div>
-<div class="row">
-  <div ng-repeat="popularMovie in popularMovies | filter:$root.searchPhrase | orderBy: $root.orderByNamePhrase">
-    <div class="col-xs-6 col-lg-4">
-      <h6>{{popularMovie.title}}</h6>
-      <img class="img-full img-responsive" ng-src="http://image.tmdb.org/t/p/w500{{popularMovie.poster_path}}">
-      <p>{{popularMovie.release_date}}</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-    </div><!--/.col-xs-6.col-lg-4-->
-  </div>
-</div><!--/row-->
+    <p class="pull-right visible-xs">
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+    </p>
+    <div class="jumbotron">
+        <h1>Movie application</h1>
+        <p>Movie application under construction.</p>
+    </div>
+    <div class="row">
+        <div ng-repeat="popularMovie in popularMovies | filter:$root.searchPhrase | orderBy: $root.orderByNamePhrase">
+            <div class="col-xs-6 col-lg-4">
+                <h6>{{popularMovie.title}}</h6>
+                <img class="img-full img-responsive" ng-src="http://image.tmdb.org/t/p/w500{{popularMovie.poster_path}}">
+                <p>{{popularMovie.release_date}}</p>
+                <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+        </div>
+    </div><!--/row-->
 </div><!--/.col-xs-12.col-sm-9-->
