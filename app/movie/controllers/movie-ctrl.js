@@ -45,6 +45,10 @@ app.controller('MovieCtrl', ['$scope', '$routeParams', 'Restangular', '$location
 		});
 	});
 
+	$scope.selectGenre = function () {
+		console.log('Genre');
+	};
+
 	$scope.changePicture = function (path) {
 		var imgPath = 'http://image.tmdb.org/t/p/w500' + path;
 		$scope.mainImage = imgPath;

@@ -6,9 +6,7 @@ img {
 	max-height: 100%;
 }
 
-.displayNone {
-	display: none;
-}
+
 
 span {
 	display:block;
@@ -27,30 +25,20 @@ span {
 	padding: 0 10px;
 	height: 50px;
 	background-color: #272b30;
-	/*position:fixed;
-	top:0;
-	left: 0;
-	width: 100%;
-	z-index: 999;*/
 }
 
-.genres {
-	transition: all .5s ease;
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	-o-transition: all .5s ease;
+.genres table {
+	background-color: #272b30;
 }
 
-@media screen and (min-width: 991.5px) {
-	.hamburger {
-		display: none;
-	}
-
-	.displayNone {
-		display: block;
-	}
+.genres a {
+	color: #fff;
 }
+
+a.bold-text {
+	color: 	#90EE90;
+}
+
 /***************************************
 ************** Comments ****************
 ***************************************/
@@ -92,7 +80,102 @@ span {
 	color: lightgray;
 }
 
+/***************************************
+********** Movie detail page ***********
+***************************************/
+
+.movie-description {
+	margin-top: 20px;
+}
+
+.movie-actors {
+	margin-top: 20px;
+}
+
+.movie-trailer iframe {
+	width: 100%;
+}
+
+.movie-actor-name {
+	width: 100%;
+}
+
+.carousel-indicators {
+	display: none;
+}
+
+/* Actors */
+
+.image-sh {
+	position: relative;
+    float: left;
+    width:  100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+/***************************************
+************* Actor page ***************
+***************************************/
+
+.flexslider {
+	/*height: 300px;*/
+	overflow: hidden;
+}
+
+.actor-thumb {
+	padding: 0;
+}
+
+.actor-info {
+	margin-top: 10px;
+
+}
+
+.actor-movies-title {
+
+}
+
+.main-image {
+	width: 100%;
+}
+
+/*****************************************
+************* Media Queries **************
+*****************************************/
+@media screen and (max-width: 991.5px) {
+	.displayNone {
+		transform: translateX(-100%);
+	}
+
+	.genres {
+		margin-top: 50px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 90;
+		transition: all .5s ease;
+		-webkit-transition: all .5s ease;
+		-moz-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		-o-transition: all .5s ease;
+	}
+}
+
 @media screen and (min-width: 991.5px) {
+	/* Navigation menu */
+	.hamburger {
+		display: none;
+	}
+
+	.displayNone {
+		display: block;
+	}
+	/* Movies page */
 	.movie-wrapper {
 		position: relative;
 	}
@@ -145,152 +228,4 @@ span {
 		top: 0;
 
 	}
-}
-
-/***************************************
-********** Movie detail page ***********
-***************************************/
-
-.movie-description {
-	margin-top: 20px;
-}
-
-.movie-actors {
-	margin-top: 20px;
-}
-
-.movie-trailer iframe {
-	width: 100%;
-}
-
-.movie-actor-name {
-	width: 100%;
-}
-
-.carousel-indicators {
-	display: none;
-}
-
-/* Actors */
-
-.image-sh {
-	position: relative;
-    float: left;
-    width:  100%;
-    height: 100%;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
-}
-
-/***************************************
-********* Image zoom animation *********
-***************************************/
-
-/*.image-zoom-container {
-	list-style: none;
-	font-size: 0px;
-}
-.zoom-container {
-	position: relative;
-	overflow: hidden;
-	display: inline-block;
-	font-size: 16px;
-	font-size: 1rem;
-	border: 1px solid #fff;
-	vertical-align: top;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-.zoom-container img {
-	display: block;
-	width: 100%;
-	height: auto;
-	-webkit-transition: all .5s ease;
-        -moz-transition: all .5s ease;
-        -ms-transition: all .5s ease;
-        -o-transition: all .5s ease;
-        transition: all .5s ease;
-}
-.zoom-container .zoom-caption {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 10;
-	background: rgba(0, 0, 0, .5);
-	-webkit-transition: all .5s ease;
-        -moz-transition: all .5s ease;
-        -ms-transition: all .5s ease;
-        -o-transition: all .5s ease;
-        transition: all .5s ease;
-}
-.zoom-container .zoom-caption h3 {
-	display: block;
-	text-align: center;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 1.5em;
-	font-weight: 900;
-	letter-spacing: -1px;
-	text-transform: uppercase;
-	color: #fff;
-	margin: 23% 0 0;
-	padding: 10px 0;
-	border-top: 5px solid rgba(255, 255, 255, .15);
-	border-bottom: 5px solid rgba(255, 255, 255, .15);
-}
-.zoom-container:hover img {
-	-webkit-transform:scale(1.25);
-    -moz-transform:scale(1.25);
-    -ms-transform:scale(1.25);
-    -o-transform:scale(1.25);
-    transform:scale(1.25);
-}
-.zoom-container:hover .zoom-caption {
-	background: none;
-}*/
-
-/*.movie-plp-container {
-	position: relative;
-	width: 260px;
-	height: 390px;
-}
-
-.movie-plp-container img {
-	position: absolute;
-	top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-	max-width: 100%;
-	max-height: 100%;
-}*/
-
-/***************************************
-************* Actor page ***************
-***************************************/
-
-.flexslider {
-	/*height: 300px;*/
-	overflow: hidden;
-}
-
-.actor-thumb {
-	padding: 0;
-}
-
-.actor-info {
-	margin-top: 10px;
-
-}
-
-.actor-movies-title {
-
-}
-
-.main-image {
-	width: 100%;
 }
