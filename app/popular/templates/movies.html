@@ -1,13 +1,10 @@
 <div class="">
     <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <p class="pull-right visible-xs">
-                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-            </p>
 
             <div class="orders">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-8 text-center">
                         <ul class="pagination">
                             <li><a ng-click="$root.orderByPhrase = 'title'" href="">A-Z</a></li>
                             <li><a ng-click="$root.orderByPhrase = '-title'" href="">Z-A</a></li>
@@ -18,7 +15,7 @@
                             <li><a ng-click="$root.orderByPhrase = ''" href="">Clear</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 search">
                         <input style="margin: 20px 0;" type="input" class="movie-search list-group-item active" ng-model="$root.searchPhrase" placeholder="Search">
                     </div>
                 </div>
@@ -26,7 +23,7 @@
 
             <div class="row movie-list">
                 <div ng-if="popularMovie.poster_path" ng-repeat="popularMovie in popularMovies | filter:$root.searchPhrase | orderBy:$root.orderByPhrase">
-                    <div class="col-xs-6 col-sm-4 col-md-3 movie-wrapper">
+                    <div class="col-xs-6 col-sm-4 col-md-2 movie-wrapper">
                         <div class="zoom-container">
                             <h4 class="text-center movie-title hidden-xs hidden-sm">{{popularMovie.title}}</h4>
                             <a ng-href="#/movie/{{popularMovie.id}}"><img class="img-full img-responsive" ng-src="http://image.tmdb.org/t/p/w500{{popularMovie.poster_path}}"></a>
