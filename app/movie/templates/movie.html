@@ -28,10 +28,12 @@
 
             <div class="row movie-actors">
                 <div class="col-md-2 col-sm-3 col-xs-6" ng-repeat="actor in movie.actors">
-                    <div class="row">
-                        <img ng-if="actor.profile_path" class="image-sh" ng-src="http://image.tmdb.org/t/p/w500{{actor.profile_path}}">
-                        <img ng-if="!actor.profile_path" class="image-sh" ng-src="app/img/noimage.jpg">
-                        <a ng-href="#/actor/{{actor.id}}" ng-click="toggleCommentsForm()" class="btn btn-success movie-actor-name">{{actor.name}}</a>
+                    <div class="row actor-wrapper">
+                        <a ng-href="#/actor/{{actor.id}}">
+                            <img ng-if="actor.profile_path" class="image-sh" ng-src="http://image.tmdb.org/t/p/w500{{actor.profile_path}}">
+                            <img ng-if="!actor.profile_path" class="image-sh" ng-src="app/img/noimage.jpg">
+                            <p ng-href="#/actor/{{actor.id}}" class="btn btn-success movie-actor-name">{{actor.name}}</p>
+                        </a>
                     </div>
                 </div>
             </div>

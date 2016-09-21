@@ -23,7 +23,7 @@
 
             <div class="row movie-list">
                 <div ng-if="popularMovie.poster_path" ng-repeat="popularMovie in popularMovies | filter:$root.searchPhrase | orderBy:$root.orderByPhrase">
-                    <div class="col-xs-6 col-sm-4 col-md-2 movie-wrapper">
+                    <div class="col-xs-6 col-sm-4 col-md-3 movie-wrapper">
                         <div class="zoom-container">
                             <h4 class="text-center movie-title hidden-xs hidden-sm">{{popularMovie.title}}</h4>
                             <a ng-href="#/movie/{{popularMovie.id}}"><img class="img-full img-responsive" ng-src="http://image.tmdb.org/t/p/w500{{popularMovie.poster_path}}"></a>

@@ -4,11 +4,11 @@
     </div>
     <div class="genres" ng-class="{displayNone: !hamMenuOpened}">
         <table class="table">
-            <tr><td><a href="#/" class="something" ng-class="{'bold-text': $root.selectedId == 'Popular'}">Popular</a></td></tr>
-            <tr><td><a href="#/upcoming" ng-class="{'bold-text': $root.selectedId == 'Upcoming'}">Upcoming</a></td></tr>
-            <tr><td><a href="#/toprated" ng-class="{'bold-text': $root.selectedId == 'Top rated'}">Top rated</a></td></tr>
-            <tr><td><a href="#/nowplaying" ng-class="{'bold-text': $root.selectedId == 'Now Playing'}">Now Playing</a></td></tr>
-            <tr ng-repeat="genre in genres"><td><a ng-class="{'bold-text': $root.selectedId == genre.id}" href="#/genre/{{genre.id}}">{{genre.name}}</a></td></tr>
+            <tr><td><a href="#/" ng-click="openHamMenu()" class="something" ng-class="{'bold-text': $root.selectedId == 'Popular'}">Popular</a></td></tr>
+            <tr><td><a href="#/upcoming" ng-click="openHamMenu()" ng-class="{'bold-text': $root.selectedId == 'Upcoming'}">Upcoming</a></td></tr>
+            <tr><td><a href="#/toprated" ng-click="openHamMenu()" ng-class="{'bold-text': $root.selectedId == 'Top rated'}">Top rated</a></td></tr>
+            <tr><td><a href="#/nowplaying" ng-click="openHamMenu()" ng-class="{'bold-text': $root.selectedId == 'Now Playing'}">Now Playing</a></td></tr>
+            <tr ng-repeat="genre in genres"><td><a ng-class="{'bold-text': $root.selectedId == genre.id}" href="#/genre/{{genre.id}}" ng-click="openHamMenu()">{{genre.name}}</a></td></tr>
         </table>
     </div>
 

@@ -26,7 +26,6 @@ app.controller('MovieCtrl', ['$scope', '$routeParams', 'Restangular', '$location
 		Restangular.setBaseUrl('https://api.themoviedb.org/3/movie');
 		query = Restangular.all(response.id).all('credits');
 		query.customGET("", params).then(function (response){
-			console.log(response.cast);
 			$scope.movie.actors = response.cast;
 		});
 
@@ -45,9 +44,8 @@ app.controller('MovieCtrl', ['$scope', '$routeParams', 'Restangular', '$location
 		});
 	});
 
-	$scope.selectGenre = function () {
-		console.log('Genre');
-	};
+	// $scope.selectGenre = function () {
+	// };
 
 	$scope.changePicture = function (path) {
 		var imgPath = 'http://image.tmdb.org/t/p/w500' + path;
