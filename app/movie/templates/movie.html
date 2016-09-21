@@ -1,15 +1,12 @@
-<div class="">
+<div class="movie-detail-wrapper">
     <div class="row">
         <div class="col-xs-12 col-sm-12">
-            <p class="pull-right visible-xs">
-                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-            </p>
-            <div class="jumbotron">
+            <div class="movie-data">
                 <div class="row">
-                    <div class="col-md-6">
-                        <img class="img-full" ng-src="{{mainImage}}">
+                    <div class="col-md-4 col-sm-4">
+                        <img class="img-full img-main" ng-src="{{mainImage}}">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-8 col-sm-8">
                         <div class="info">
                             <p>Title: <strong>{{movie.title}}</strong></p>
                             <p>Release date: {{movie.release_date | date : 'dd MMMM yyyy'}}</p>
@@ -17,18 +14,8 @@
                             <p>Popularity: {{movie.popularity}}</p>
                             <p>Budget: {{movie.budget | currency}}</p>
                             <p>Revenue: {{movie.revenue | currency}}</p>
+                            <p>{{movie.overview}}</p>
                         </div>
-                        <div class="row thumbnails">
-                            <div class="col-xs-3 col-lg-3" ng-repeat="image in movie.images | limitTo: 4">
-                                <a href="" ng-click="changePicture(image.file_path)"><img class="img-thumbnail img-full" ng-src="http://image.tmdb.org/t/p/w500{{image.file_path}}"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row movie-description text-justify">
-                    <div class="col-xs-12 col-lg-12">
-                        <p>{{movie.overview}}</p>
                     </div>
                 </div>
             </div>
@@ -40,15 +27,11 @@
             </div>
 
             <div class="row movie-actors">
-                <div class="col-md-12" ng-repeat="actor in movie.actors">
+                <div class="col-md-2 col-sm-3 col-xs-6" ng-repeat="actor in movie.actors">
                     <div class="row">
-                        <div class="col-md-3 col-sm-3 col-md-3 col-lg-3">
-                            <img ng-if="actor.profile_path" class="img-thumbnail image-sh" ng-src="http://image.tmdb.org/t/p/w500{{actor.profile_path}}">
-                            <img ng-if="!actor.profile_path" class="img-thumbnail image-sh" ng-src="app/img/noimage.jpg">
-                        </div>
-                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                            <a ng-href="#/actor/{{actor.id}}" ng-click="toggleCommentsForm()" class="btn btn-warning movie-actor-name">{{actor.name}}</a>
-                        </div>
+                        <img ng-if="actor.profile_path" class="image-sh" ng-src="http://image.tmdb.org/t/p/w500{{actor.profile_path}}">
+                        <img ng-if="!actor.profile_path" class="image-sh" ng-src="app/img/noimage.jpg">
+                        <a ng-href="#/actor/{{actor.id}}" ng-click="toggleCommentsForm()" class="btn btn-success movie-actor-name">{{actor.name}}</a>
                     </div>
                 </div>
             </div>
@@ -70,6 +53,6 @@
 
         </div>
 
-    </div><!--/row-->
+    </div>
 
-</div><!--/.container-->
+</div>

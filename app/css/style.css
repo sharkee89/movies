@@ -24,7 +24,10 @@ span {
 	padding-left: 0;
 	padding-right: 0;
 }
-
+.genres-container td {
+	padding-top: 1.5% !important;
+	padding-bottom: 1.5% !important;
+}
 .hamburger {
 	padding: 0 10px;
 	height: 50px;
@@ -112,33 +115,41 @@ ul.pagination li:last-child a {
 .movie-wrapper .movie-rel-date {
 	color: lightgray;
 }
-
 /***************************************
 ********** Movie detail page ***********
 ***************************************/
-
+.movie-detail-wrapper .img-main {
+	width: 100%;
+	height: 34vmax;
+}
 .movie-description {
 	margin-top: 20px;
 }
-
-.movie-actors {
-	margin-top: 20px;
-}
-
 .movie-trailer iframe {
 	width: 100%;
 }
-
-.movie-actor-name {
-	width: 100%;
-}
-
 .carousel-indicators {
 	display: none;
 }
-
+.movie-data {
+	margin-bottom: 20px;
+}
 /* Actors */
-
+.movie-actors {
+	margin-top: 20px;
+	margin-left: 0;
+	margin-right: 0;
+}
+.movie-actors img {
+	height: 17vmax;
+}
+.movie-actors > div {
+	margin-bottom: 15px;
+}
+.movie-actor-name {
+	width: 100%;
+	border-radius: 0;
+}
 .image-sh {
 	position: relative;
     float: left;
@@ -208,10 +219,22 @@ ul.pagination li:last-child a {
 		border-bottom: 1px solid #fff;
 		/*background-color: rgba(144, 238, 144, 0.7);*/
 	}
+	.movie-detail-wrapper .img-main {
+		height: 44vmax;
+	}
+	.movie-actors img {
+		height: 35vmax;
+	}
 }
 
 @media screen and (min-width: 991.5px) {
+	.content-page {
+		margin-left: 25%;
+	}
 	/* Navigation menu */
+	.sidebar-genres-menu {
+		position: fixed;
+	}
 	.hamburger {
 		display: none;
 	}
@@ -271,9 +294,19 @@ ul.pagination li:last-child a {
 	.zoom-container img {
 		height: 59vmax;
 	}
+	.movie-detail-wrapper .img-main {
+		height: 94vmax;
+		text-align: center;
+	}
+	.movie-actors img {
+		height: 70vmax;
+	}
 }
 @media screen and (max-width: 450px) {
 	.zoom-container img {
+		height: 35vmax;
+	}
+	.movie-actors img {
 		height: 35vmax;
 	}
 }
