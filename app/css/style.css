@@ -33,17 +33,23 @@ span {
 	height: 50px;
 	background-color: #272b30;
 }
-
 .genres table {
 	background-color: #272b30;
 }
-
 .genres a {
 	color: #fff;
 }
-
+.genres td a:hover {
+	color: 	#90EE90;
+	text-decoration: none;
+}
 a.bold-text {
 	color: 	#90EE90;
+	text-decoration: none;
+}
+a.bold-order-text {
+	background-color: #90EE90 !important; 
+	color: #000;
 }
 /***************************************
 ************* Pagination ***************
@@ -66,6 +72,9 @@ ul.pagination li:first-child a {
 ul.pagination li:last-child a {
 	border-right: none;
 	border-radius: 0;
+}
+.search {
+	margin-top: -.5%
 }
 .search input {
 	background-color: #272b30 !important;
@@ -118,6 +127,9 @@ ul.pagination li:last-child a {
 /***************************************
 ********** Movie detail page ***********
 ***************************************/
+.movie-detail-wrapper {
+	margin-top: 20px;
+}
 .movie-detail-wrapper .img-main {
 	width: 100%;
 	height: 34vmax;
@@ -168,26 +180,42 @@ ul.pagination li:last-child a {
 /***************************************
 ************* Actor page ***************
 ***************************************/
-
+.actor-detail-wrapper {
+	margin-top: 20px;
+}
+.actore-main-image > div{
+	float: left;
+    width: 30%;
+}
+.main-image-wrapper {
+    margin-right: 30px;
+    margin-left: 0px;
+    /*margin-top: 20px;*/
+}
 .flexslider {
 	/*height: 300px;*/
 	overflow: hidden;
 }
-
 .actor-thumb {
 	padding: 0;
 }
-
 .actor-info {
-	margin-top: 10px;
-
+	padding-left: 20px;
+	margin-right: 10px;
 }
-
-.actor-movies-title {
-
-}
-
 .main-image {
+	width: 100%;
+}
+.actor-movies {
+	margin-top: 20px;
+	margin-left: 0px;
+}
+.actor-movies .actor-movie {
+	padding-left: 0;
+	padding-right: 0;
+}
+.actor-movies img {
+	height: 18vmax;
 	width: 100%;
 }
 
@@ -294,6 +322,12 @@ ul.pagination li:last-child a {
 		top: 0;
 
 	}
+	.actor-movies img {
+		opacity: .7;
+	}
+	.actor-movies img:hover {
+		opacity: 1;
+	}
 }
 @media screen and (max-width: 767.5px) {
 	.zoom-container img {
@@ -306,6 +340,9 @@ ul.pagination li:last-child a {
 	.movie-actors img {
 		height: 70vmax;
 	}
+	.actor-movies img {
+		height: 59vmax;
+	}
 }
 @media screen and (max-width: 450px) {
 	.zoom-container img {
@@ -313,5 +350,8 @@ ul.pagination li:last-child a {
 	}
 	.movie-actors img {
 		height: 35vmax;
+	}
+	.actor-movies img {
+		height: 50vmax;
 	}
 }

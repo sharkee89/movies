@@ -6,13 +6,13 @@
                 <div class="row">
                     <div class="col-md-8 text-center">
                         <ul class="pagination">
-                            <li><a ng-click="$root.orderByPhrase = 'title'" href="">A-Z</a></li>
-                            <li><a ng-click="$root.orderByPhrase = '-title'" href="">Z-A</a></li>
-                            <li class="hidden-xs hidden-sm"><a ng-click="$root.orderByPhrase = '-release_date'" href="">Newest to oldest</a></li>
-                            <li class="hidden-md hidden-lg"><a ng-click="$root.orderByPhrase = '-release_date'" href="">Newest</a></li>
-                            <li class="hidden-xs hidden-sm"><a ng-click="$root.orderByPhrase = 'release_date'" href="">Oldest to newest</a></li>
-                            <li class="hidden-md hidden-lg"><a ng-click="$root.orderByPhrase = 'release_date'" href="">Oldest</a></li>
-                            <li><a ng-click="$root.orderByPhrase = ''" href="">Clear</a></li>
+                            <li><a ng-click="$root.orderByPhrase = 'title'" href="" ng-class="{'bold-order-text': $root.orderByPhrase == 'title'}">A-Z</a></li>
+                            <li><a ng-click="$root.orderByPhrase = '-title'" href="" ng-class="{'bold-order-text': $root.orderByPhrase == '-title'}">Z-A</a></li>
+                            <li class="hidden-xs hidden-sm"><a ng-click="$root.orderByPhrase = '-release_date'" href="" ng-class="{'bold-order-text': $root.orderByPhrase == '-release_date'}">Newest to oldest</a></li>
+                            <li class="hidden-md hidden-lg"><a ng-click="$root.orderByPhrase = '-release_date'" href="" ng-class="{'bold-order-text': $root.orderByPhrase == '-release_date'}">Newest</a></li>
+                            <li class="hidden-xs hidden-sm"><a ng-click="$root.orderByPhrase = 'release_date'" href="" ng-class="{'bold-order-text': $root.orderByPhrase == 'release_date'}">Oldest to newest</a></li>
+                            <li class="hidden-md hidden-lg"><a ng-click="$root.orderByPhrase = 'release_date'" href="" ng-class="{'bold-order-text': $root.orderByPhrase == 'release_date'}">Oldest</a></li>
+                            <li><a ng-click="$root.orderByPhrase = ''" href="" ng-class="{'bold-order-text': $root.orderByPhrase == ''}">Clear</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 search">

@@ -1,6 +1,12 @@
 //require('newrelic');
 
-var app = angular.module('MovieApplication', ['ngRoute', 'restangular', 'youtube-embed', 'firebase', 'ui.bootstrap', 'angular-flexslider'])
+var app = angular.module('MovieApplication', [
+	'ngRoute',
+	'restangular',
+	'youtube-embed',
+	'firebase',
+	'ui.bootstrap'
+])
 
 .config(function(RestangularProvider) {
                 //set the base url for api calls on our RESTful services

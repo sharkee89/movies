@@ -27,9 +27,7 @@ app.controller('ActorCtrl', ['$scope', '$routeParams', 'Restangular', '$location
                 };
                     $scope.mySlides.push(movie.image);
             }
-
         });
-
     });
 
     $scope.changePicture = function (path) {
@@ -81,7 +79,6 @@ app.controller('ActorCtrl', ['$scope', '$routeParams', 'Restangular', '$location
         return shuffle(indexes);
     }
 
-    // http://stackoverflow.com/questions/962802#962890
     function shuffle(array) {
         var tmp, current, top = array.length;
 

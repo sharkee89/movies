@@ -8,7 +8,7 @@
                     </div>
                     <div class="col-md-8 col-sm-8">
                         <div class="info">
-                            <p>Title: <strong>{{movie.title}}</strong></p>
+                            <h3>{{movie.title}}</h3>
                             <p>Release date: {{movie.release_date | date : 'dd MMMM yyyy'}}</p>
                             <p>Duration: {{movie.runtime}} min</p>
                             <p>Popularity: {{movie.popularity}}</p>
@@ -37,21 +37,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row mybody">
-                <div class="col-md-12">
-                    <h3>Similar movies</h3>
-                    <div class="doc-list-wrapper" data-docs="docs"></div>
-                </div>
-            </div>
-
-            <script type="text/ng-template" id="tmpl-doc-list-wrapper">
-                <ul class="doc-list" bx-slider>
-                    <li class="doc-thumbnail" ng-repeat="doc in docs" bx-slider-item>
-                        <a href="#/movie/{{doc.id}}"><img ng-src="{{doc.doc}}"></a>
-                    </li>
-                </ul>
-            </script>
 
         </div>
 

@@ -1,59 +1,39 @@
-<div class="">
+<div class="actor-detail-wrapper">
     <div class="row ">
         <div class="col-xs-12 col-sm-12">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="col-md-6">
+                    <div class="actore-main-image hidden-xs">
+                        <div class="row main-image-wrapper">
+                            <img class="main-image" ng-src="{{mainImage}}">
+                        </div>
+                    </div>
+                    <div class="col-md-4 visible-xs">
                         <div class="row">
                             <img class="main-image" ng-src="{{mainImage}}">
                         </div>
-                        <!--<div class="row hidden-xs hidden-sm">
-                            <div class="col-xs-3 col-lg-3 actor-thumb" ng-repeat="image in actor.images | limitTo: 4">
-                                <a href="" ng-click="changePicture(image.file_path)"><img class="img-thumbnail img-full" ng-src="http://image.tmdb.org/t/p/w500{{image.file_path}}"></a>
-                            </div>
-                        </div>-->
                     </div>
-                    <div class="col-md-6">
-                        <!--<div class="row hidden-lg hidden-md">
-                            <div class="col-xs-3 col-lg-3 actor-thumb" ng-repeat="image in actor.images | limitTo: 4">
-                                <a href="" ng-click="changePicture(image.file_path)"><img class="img-thumbnail img-full" ng-src="http://image.tmdb.org/t/p/w500{{image.file_path}}"></a>
-                            </div>
-                        </div>-->
+                    <div class="actor-desc">
                         <div class="row">
-                            <div>
-                                <h4 class="actor-movies-title hidden-lg hidden-md">{{actor.name}} - Movies</h4>
-                                <!--<flex-slider slide="s in mySlides">
-                                    <li>
-                                        <img ng-src="{{s}}">
-                                    </li>
-                                </flex-slider>-->
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="actor-info">
-                                <p>Name: <strong>{{actor.name}}</strong></p>
+                            <div class="actor-info text-justify">
+                                <h3>{{actor.name}}</h3>
                                 <p>Birthday: {{actor.birthday | date : 'dd MMMM yyyy'}}</p>
                                 <p ng-if="actor.deathday">Death Day: {{actor.deathday}}</p>
                                 <p>Place of Birth: {{actor.place_of_birth}}</p>
+
+                                <h4 class="">Biography</h4>
+                                <p>{{actor.biography}}</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-
-            <div class="row movie-description text-justify">
-                <div class="col-xs-12 col-lg-12">
-                    <h4 class="">{{actor.name}} - Biography</h4>
-                    <p>{{actor.biography}}</p>
+            <div class="row actor-movies">
+                <h3>{{actor.name}} - Movies</h3>
+                <div ng-if="movie.poster_path" class="actor-movie col-sm-2 col-xs-6" ng-repeat="movie in movieCredits">
+                    <a href="#/movie/{{movie.id}}"><img class="img-" ng-src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}"></a>
                 </div>
             </div>
         </div>
-
-
-
     </div>
-
-</div><!--/row-->
-
-</div><!--/.container-->
+</div>
