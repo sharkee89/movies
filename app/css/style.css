@@ -39,6 +39,13 @@ span {
 .genres a {
 	color: #fff;
 }
+.genres td {
+	border-top: 1px solid #fff !important;
+}
+.genres tbody tr:first-child td {
+	border-top: none !important;
+	border-collapse: initial !important;
+}
 .genres td a:hover {
 	color: 	#90EE90;
 	text-decoration: none;
@@ -80,8 +87,9 @@ ul.pagination li:last-child a {
 	background-color: #272b30 !important;
 	border-color: #90EE90 !important;
 }
-.search input:focus {
-	border-color: #90EE90 !important;
+input.movie-search:focus {
+	outline: none !important;
+    box-shadow: 0 0 10px #90EE90;
 }
 
 /***************************************
