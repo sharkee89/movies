@@ -1,6 +1,42 @@
 /***************************************
 *********** General settings ***********
 ***************************************/
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(127, 144, 164, .2);
+}
+::-webkit-scrollbar-thumb {
+    background-color: #90EE90;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    background-clip: content-box;
+}
+::-o-scrollbar {
+    width: 15px;
+}
+::-o-scrollbar-track {
+    background-color: rgba(127, 144, 164, .2);
+}
+::-o-scrollbar-thumb {
+    background-color: #90EE90;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    background-clip: content-box;
+}
+::-ms-scrollbar {
+    width: 15px;
+}
+::-ms-scrollbar-track {
+    background-color: rgba(127, 144, 164, .2);
+}
+::-ms-scrollbar-thumb {
+    background-color: #90EE90;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    background-clip: content-box;
+}
 img {
 	max-width: 100%;
 	max-height: 100%;
