@@ -1,7 +1,4 @@
-app.controller('ActorCtrl', ['$scope', '$routeParams', 'Restangular', '$location', '$firebaseArray', function($scope, $routeParams, Restangular, $location, $firebaseArray){
-    /*$scope.showCommentForm = false;
-    var ref = new Firebase("https://shining-heat-1948.firebaseio.com/comments");
-    $scope.comments = $firebaseArray(ref);*/
+app.controller('ActorCtrl', ['$scope', '$routeParams', 'Restangular', '$location', function($scope, $routeParams, Restangular, $location){
 
     Restangular.setBaseUrl('https://api.themoviedb.org/3/person');
     var params = {api_key: "1fd95566952c08b6ecf132ae47c16a33"};

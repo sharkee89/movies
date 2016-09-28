@@ -3,9 +3,7 @@
 var app = angular.module('MovieApplication', [
 	'ngRoute',
 	'restangular',
-	'youtube-embed',
-	'firebase',
-	'ui.bootstrap'
+	'youtube-embed'
 ])
 
 .config(function(RestangularProvider) {
